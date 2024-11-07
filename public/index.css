@@ -1,0 +1,111 @@
+/* Style for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f9fc;
+  }
+  
+  /* Container for the task list app */
+  #app-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title for the task list */
+  #app-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333333;
+    text-align: center;
+  }
+  
+  /* Style for the form */
+  #new-task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #new-task-title {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  #new-task-title:focus {
+    border-color: #000000;
+  }
+  
+  /* Style for the submit button */
+  #new-task-form button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #new-task-form button:hover {
+    background-color: #313339;
+  }
+  
+  /* Style for the task list */
+  #list {
+    list-style: none;
+    padding: 0;
+    max-height: 300px; /* Set a maximum height for the task list */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    border: 1px solid #ddd; /* Optional: add a border for clarity */
+    border-radius: 4px;
+  }
+  
+  #list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f1f3f5;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #list li:hover {
+    background-color: #e2e6ea;
+  }
+  
+  /* Style for each task label */
+  #list li label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #333333;
+    cursor: pointer;
+  }
+  
+  #list li input[type="checkbox"] {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Completed task styling */
+  #list li.completed label {
+    text-decoration: line-through;
+    color: #888888;
+  }
